@@ -47,6 +47,14 @@
 			],
 			"responses": ["Gettings news ..."],
 			"context_set": "news"
+		},
+		{
+			"tag": "monke",
+			"patterns": ["Activate monke mode", "Become monke", "Monke"],
+			"responses": [
+				"<:monke:807074045513957376>",
+				"<:monke:807074045513957376> mode activated"
+			]
 		}
 	]
 }

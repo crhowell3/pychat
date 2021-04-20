@@ -105,6 +105,9 @@ class Client(discord.Client):
         if message.author.id == self.user.id:
             return
 
+        elif message.channel.id != 834115688616296449:
+            return
+
         else:
             inp = message.content
             result = model.predict([bag_of_words(inp, words)])[0]
