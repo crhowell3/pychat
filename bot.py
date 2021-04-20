@@ -4,6 +4,8 @@ import random
 import tensorflow as tf
 import tflearn
 import numpy as np
+import os
+from dotenv import load_dotenv
 from nltk.stem.lancaster import LancasterStemmer
 from nltk import word_tokenize, sent_tokenize
 import discord
@@ -120,5 +122,8 @@ class Client(discord.Client):
                 await message.channel.send("I didn't get that. Can you explain or try again?")
 
 
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+
 client = Client()
-client.run('ODMzOTU0Njk1MzUzMjA0NzY4.YH521Q.PFs-JW-IE7Uclr1uqNnN4EaoGQE')
+client.run(TOKEN)
